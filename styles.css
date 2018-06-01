@@ -5,7 +5,20 @@
 }
 
 body {
-  background: #202020;
+  background: #334d50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(335deg, #cbcaa5, #334d50); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    335deg,
+    #cbcaa5,
+    #334d50
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(335deg, #cbcaa5f9, #334d50dd),
+    url('https://images.unsplash.com/photo-1489389944381-3471b5b30f04?ixlib=rb-0.3.5&s=1e0b70e942c97ac0f6a6679cf59df3c5&auto=format&fit=crop&w=1920&q=60'); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-attachment: fixed;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   font: normal 16px/24px 'Open Sans', Arial, sans-serif;
   height: 100vh;
 }
@@ -19,22 +32,29 @@ body {
 
 .card {
   align-items: center;
-  background-color: #383838;
-  background: linear-gradient(135deg, #383838 0, #404040 100%)
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffffff, #ece9e6); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  color: #a0a0a0;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.3);
+  color: #334d50;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 280px;
+  height: 25em;
   padding: 3em;
   position: absolute;
-  width: 460px;
+  width: 40em;
 }
 
 .card h2 {
   font: 300 32px/48px 'Open Sans';
+  font: 300 2.5em/1.5 'Open Sans';
+  /* font: 300 2em/1.5 'Open Sans'; */
   text-transform: uppercase;
 }
 
@@ -48,6 +68,8 @@ body {
   display: flex;
   flex-direction: column;
   font: 300 16px/24px 'Open Sans';
+  font: 300 1.25em/1.5 'Open Sans';
+  /* font: 300 1em/1.5 'Open Sans'; */
   margin-top: 0;
 }
 

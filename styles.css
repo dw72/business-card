@@ -5,15 +5,11 @@
 }
 
 body {
-  background: #334d50; /* fallback for old browsers */
-  background: -webkit-linear-gradient(335deg, #cbcaa5, #334d50); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    335deg,
-    #cbcaa5,
-    #334d50
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #334d50;
+  background: -webkit-linear-gradient(335deg, #cbcaa5, #334d50);
+  background: linear-gradient(335deg, #cbcaa5, #334d50);
   background: linear-gradient(335deg, #cbcaa5f9, #334d50dd),
-    url('https://images.unsplash.com/photo-1489389944381-3471b5b30f04?ixlib=rb-0.3.5&s=1e0b70e942c97ac0f6a6679cf59df3c5&auto=format&fit=crop&w=1920&q=60'); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    url('https://images.unsplash.com/photo-1489389944381-3471b5b30f04?ixlib=rb-0.3.5&s=1e0b70e942c97ac0f6a6679cf59df3c5&auto=format&fit=crop&w=1920&q=60');
   background-attachment: fixed;
   background-position-x: center;
   background-repeat: no-repeat;
@@ -32,13 +28,9 @@ body {
 
 .card {
   align-items: center;
-  background: #ece9e6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #ffffff, #ece9e6); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #ffffff,
-    #ece9e6
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ece9e6;
+  background: -webkit-linear-gradient(to bottom, #ffffff, #ece9e6);
+  background: linear-gradient(to bottom, #ffffff, #ece9e6);
   border-radius: 5px;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.3);
   color: #334d50;

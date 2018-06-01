@@ -1,0 +1,79 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #202020;
+  font: normal 16px/24px 'Open Sans', Arial, sans-serif;
+  height: 100vh;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.card {
+  align-items: center;
+  background-color: #383838;
+  background: linear-gradient(135deg, #383838 0, #404040 100%)
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  color: #a0a0a0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 280px;
+  padding: 3em;
+  position: absolute;
+  width: 460px;
+}
+
+.card h2 {
+  font: 300 32px/48px 'Open Sans';
+  text-transform: uppercase;
+}
+
+.card h2 span {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.contact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font: 300 16px/24px 'Open Sans';
+  margin-top: 0;
+}
+
+.contact > * {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0;
+}
+
+.phone span {
+  margin: 0.1em;
+}
+
+.phone span:last-child:before {
+  content: '+';
+}
+
+.phone span:after,
+.email span:after {
+  content: attr(data-content);
+}
+
+.email span:nth-child(2):before {
+  content: '@';
+}
+
+.email span:first-child:before {
+  content: '.';
+}

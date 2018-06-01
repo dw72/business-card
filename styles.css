@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background: #334d50;
+  background: -webkit-linear-gradient(335deg, #cbcaa5, #334d50);
+  background: linear-gradient(335deg, #cbcaa5, #334d50);
+  background: linear-gradient(335deg, #cbcaa5f9, #334d50dd),
+    url('https://images.unsplash.com/photo-1489389944381-3471b5b30f04?ixlib=rb-0.3.5&s=1e0b70e942c97ac0f6a6679cf59df3c5&auto=format&fit=crop&w=1920&q=60');
+  background-attachment: fixed;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  font: normal 16px/24px 'Open Sans', Arial, sans-serif;
+  height: 100vh;
+  justify-content: center;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a,
+a:visited {
+  color: #334d50;
+}
+
+a:hover,
+a:focus {
+  color: #4a6c70;
+}
+
+.container {
+  width: 50em;
+  height: 30em;
+  perspective: 90em;
+  transition: transform 1s;
+}
+
+.card {
+  align-items: center;
+  background: #ece9e6;
+  background: -webkit-linear-gradient(to bottom, #ffffff, #ece9e6);
+  background: linear-gradient(to bottom, #ffffff, #ece9e6);
+  border-radius: 5px;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.3);
+  color: #334d50;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  transform-origin: 100% 50%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.49, 0.23, 0.58, 0.49);
+}
+
+.card.flipped {
+  transform: translate(-100%) rotateY(-180deg);
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.back {
+  display: flex;
+  font-size: 7em;
+  transform: rotateY(180deg);
+  width: 80%;
+}
+
+.back span {
+  flex: 1;
+  text-align: center;
+}
+
+.front h2 {
+  font: 300 3em/1.5 'Open Sans';
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.front h2 span {
+  font-weight: 700;
+}
+
+.contact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font: 300 1.5em/1.5 'Open Sans';
+}
+
+.contact > * {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0;
+}
+
+.email span::after {
+  content: attr(data-content);
+}
+
+.email span:nth-child(2)::before {
+  content: '@';
+}
+
+.email span:first-child::before {
+  content: '.';
+}

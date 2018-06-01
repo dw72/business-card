@@ -45,21 +45,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 25em;
+  height: 30em;
   padding: 3em;
   position: absolute;
-  width: 40em;
+  width: 50em;
 }
 
 .card h2 {
-  font: 300 32px/48px 'Open Sans';
-  font: 300 2.5em/1.5 'Open Sans';
-  /* font: 300 2em/1.5 'Open Sans'; */
+  font: 300 3em/1.5 'Open Sans';
   text-transform: uppercase;
 }
 
 .card h2 span {
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 0;
 }
 
@@ -67,9 +65,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font: 300 16px/24px 'Open Sans';
-  font: 300 1.25em/1.5 'Open Sans';
-  /* font: 300 1em/1.5 'Open Sans'; */
+  font: 300 1.5em/1.5 'Open Sans';
   margin-top: 0;
 }
 

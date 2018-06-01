@@ -28,6 +28,7 @@ body::-webkit-scrollbar {
 a,
 a:visited {
   color: #334d50;
+  text-decoration: none;
 }
 
 a:hover,
@@ -66,20 +67,48 @@ a:focus {
 
 .front,
 .back {
+  align-items: center;
   backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 3em;
 }
 
 .back {
-  display: flex;
-  font-size: 7em;
+  flex-direction: row;
   transform: rotateY(180deg);
-  width: 80%;
 }
 
 .back span {
   flex: 1;
+  position: relative;
   text-align: center;
+  margin-top: 2em;
+}
+
+.back span::after {
+  content: '';
+  border-right: 1px solid #cbcaa5;
+  height: 3em;
+  position: absolute;
+  right: 0;
+  top: -0.5em;
+}
+
+.back span:last-child::after {
+  content: none;
+}
+
+.back i {
+  font-size: 7em;
+}
+
+.back p {
+  margin: 0;
 }
 
 .front h2 {

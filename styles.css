@@ -112,15 +112,6 @@ a:focus {
   margin: 0;
 }
 
-.phone span {
-  margin: 0.1em;
-}
-
-.phone span:last-child:before {
-  content: '+';
-}
-
-.phone span:after,
 .email span:after {
   content: attr(data-content);
 }

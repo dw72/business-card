@@ -1,14 +1,18 @@
 ;(function() {
   const card = document.querySelector('.card')
-  const className = card.getAttribute('data-toggle-class')
 
-  document.addEventListener('click', function() {
-    if (['I', 'A'].indexOf(event.target.nodeName) !== -1) {
-      return
-    } else if (event.target.classList.contains('card')) {
-      card.classList.toggle(className)
+  document.addEventListener('click', function(event) {
+    if (event.path.indexOf(card) !== -1) {
+      if (
+        event.path.some(function(el) {
+          return el.tagName === 'A'
+        })
+      ) {
+        return
+      }
+      card.classList.toggle('flipped')
     } else {
-      card.classList.remove(className)
+      card.classList.remove('flipped')
     }
   })
 })()

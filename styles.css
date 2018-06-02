@@ -145,3 +145,46 @@ a:focus {
 .email span:first-child::before {
   content: '.';
 }
+
+.arrow {
+  align-items: center;
+  border-radius: 50%;
+  bottom: 1em;
+  color: #cbcaa5;
+  display: flex;
+  font-size: 2em;
+  height: 0.8em;
+  justify-content: center;
+  position: absolute;
+  width: 0.8em;
+}
+
+.arrow::after {
+  animation: sonarEffect 2s ease-out 1.5s infinite;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #cbcaa5;
+  content: '';
+  height: 100%;
+  left: -1px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: scale(0.9);
+  width: 100%;
+  z-index: -1;
+}
+
+@keyframes sonarEffect {
+  0% {
+    opacity: 0.2;
+  }
+  40% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #cbcaa5, 0 0 0 10px rgba(255, 255, 255, 0.25);
+    opacity: 0.4;
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #cbcaa5, 0 0 0 10px rgba(255, 255, 255, 0.25);
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

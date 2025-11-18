@@ -2,9 +2,11 @@
   const card = document.querySelector('.card')
 
   document.addEventListener('click', function(event) {
-    if (event.path.indexOf(card) !== -1) {
+    const path = event.composedPath ? event.composedPath() : event.path
+
+    if (path.indexOf(card) !== -1) {
       if (
-        event.path.some(function(el) {
+        path.some(function(el) {
           return el.tagName === 'A'
         })
       ) {

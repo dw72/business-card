@@ -22,4 +22,4 @@ jobs:
           local_path: ./
           remote_path: /home/${{ secrets.SFTP_USERNAME }}/www
           sftp_only: true
-          exclude: '.git/**'
+          exclude: '.git/**,.github/**'
